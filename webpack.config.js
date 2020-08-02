@@ -17,7 +17,7 @@ module.exports = {
   },
   entry: [
     path.resolve(__dirname, 'app/main.js'),
-    path.resolve(__dirname, 'app/stylesheets/main.scss'),
+    path.resolve(__dirname, 'app/stylesheets/main.css'),
   ],
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -26,15 +26,24 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.css$/, include: path.resolve(__dirname, 'app'), loader: 'style-loader!css-loader' },
       {
-        test: /\.scss$/,
+        test: /\.css$/,
         exclude: /node_modules/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
-            'css-loader',
-            { loader: 'sass-loader', query: { sourceMap: false } },
+            {
+              loader: 'css-loader',
+              options: {importLoaders: 1},
+            },
+            {
+              loader: 'postcss-loader',
+              options: {
+                config: {
+                  path: __dirname + '/postcss.config.js'
+                }
+              },
+            },
           ],
           publicPath: '../'
         }),

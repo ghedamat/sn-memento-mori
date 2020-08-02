@@ -10,6 +10,7 @@ export default class BridgeManager {
   }
 
   constructor() {
+    console.log('bridge started');
     this.updateObservers = [];
     this.initiateBridge();
   }
@@ -27,6 +28,7 @@ export default class BridgeManager {
   }
 
   getNote() {
+    console.log('bridge state', this.note);
     return this.note;
   }
 
