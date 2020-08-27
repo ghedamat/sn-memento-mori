@@ -74,7 +74,7 @@ function Year(props) {
   let year = props.year;
   for (let i = year * 52; i < (year * 52) + 52; i++) {
     let past = props.data[i];
-    weeks.push(<button onClick={() => {props.clicked(i)}} className={'week-btn ' + (past ? 'bg-black' : 'bg-gray-500')}>{year}:{(i % 52) + 1}</button>);
+    weeks.push(<button onClick={() => {props.clicked(i)}} className={'week-btn ' + (past ? 'bg-black' : 'bg-gray-500')}>{year + 1}:{(i % 52) + 1}</button>);
   }
   return (
     <span class="year">{weeks}</span>
