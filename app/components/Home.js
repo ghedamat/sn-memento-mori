@@ -55,7 +55,9 @@ export default class Home extends React.Component {
       <div class="container">
         <div class="text-center mt-2">
           <h1 class="title"> Memento Mori </h1>
-          <a href="https://scrawnytobrawny.com/28251" target="_blank" class="underline">Inspired by Craig Weller</a>
+          <a href="https://scrawnytobrawny.com/28251" target="_blank" class="subtitle">
+            Inspired by Craig Weller
+          </a>
         </div>
 
         <div id="buttons">

@@ -13,3 +13,8 @@
   @apply text-4xl font-bold;
   color: var(--sn-stylekit-warning-color);
 }
+
+.subtitle {
+  @apply underline;
+  color: var(--sn-stylekit-editor-foreground-color);
+}
