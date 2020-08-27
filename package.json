@@ -1,7 +1,10 @@
 {
-  "name": "sn-react-blank-slate",
+  "name": "sn-memento-mori",
   "version": "1.0.0",
   "main": "dist/dist.js",
+  "sn": {
+    "main": "dist/index.html"
+  },
   "scripts": {
     "build": "webpack",
     "start": "webpack-dev-server --devtool eval --progress --hot --content-base app"
